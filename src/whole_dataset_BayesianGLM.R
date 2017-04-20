@@ -5,11 +5,10 @@ library(foreach)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-print("Modeling entire dataset")
 
 # Function to extract all genes in dataset using readCEF fucntion 
 get.genes.and.cells <- function(DATASET){
-  temp <- readCEF(DATASET)
+    temp <- readCEF(DATASET)
   cells <- unique(temp$Cell_type)
   genes <- rownames(temp$Readcount)
   metadata <- list(
@@ -21,7 +20,7 @@ get.genes.and.cells <- function(DATASET){
 
 
 BayesianGLM_alldataset <- function(DATASET, parallel=T){
-
+  print("Modeling entire dataset")
   stanmodel <- "
 
     data {
@@ -96,7 +95,7 @@ BayesianGLM_alldataset <- function(DATASET, parallel=T){
   print("extracting genes")
 
   TGTGENE <- get.genes.and.cells(DATASET)
-  TGTGENE <- TGTGENE$Cell_type
+  TGTGENE <- TGTGENE$genes
 
   ############
   # Run MCMC #
