@@ -18,6 +18,6 @@ ViolinPlot <- function(TGTGENE, TGTCELL){
     MAP <- rbind(MAP, TMP)
   }
   colnames(MAP) <- c("Gene", "iteration","Cell_type", "beta")
-  VIO <- ggplot(MAP, aes(x=Cell_type, y=beta, fill=Cell_type)) + geom_violin(trim=FALSE) + facet_grid(Gene~., scales="free")
+  VIO <- ggplot(MAP, aes(x=Cell_type, y=beta, fill=Cell_type)) + geom_violin(trim=FALSE,scale = "width") + facet_grid(Gene~., scales="free")
   VIO
 }
