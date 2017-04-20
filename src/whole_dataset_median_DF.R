@@ -4,7 +4,7 @@
 #################################################################
 
 
-Median.data.frame <- function(OUTPUT.folder=OUTPUT){
+Medians.to.data.frame <- function(OUTPUT.folder=OUTPUT){
   require(dplyr)
   require(tibble)
   require(doParallel)
