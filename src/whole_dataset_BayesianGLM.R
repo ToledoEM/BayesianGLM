@@ -20,7 +20,7 @@ get.genes.and.cells <- function(DATASET){
 }
 
 
-BayesianGLM <- function(DATASET, parallel=T){
+BayesianGLM_alldataset <- function(DATASET, parallel=T){
 
   stanmodel <- "
 
