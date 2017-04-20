@@ -18,3 +18,10 @@ doParallel
 Run "runGLM.R"  
 You can modify DATASET/GENESET/CELLTYPESET in the script to create your own plot.
 
+### For whole data set analysis  
+Only with parallelization    
+
+Functions:        
+
+BayesianGLM_alldataset() Perform MCMC for all the genes and cell types in the cel file 
+Medians.to.data.frame() Export iterations of MCMC into a data frame of medians
