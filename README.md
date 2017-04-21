@@ -23,5 +23,7 @@ Only with parallelization
 
 Functions:        
 
-BayesianGLM_alldataset() Perform MCMC for all the genes and cell types in the cel file.     
+BayesianGLM_alldataset() Perform MCMC for all the genes and cell types in the cel file. This on a i7 6700K CPU with 32G RAM on Linux Ubuntu 16.01 takes ~30hrs for 16000 genes.
+
 Medians.to.data.frame() Export iterations of MCMC into a data frame of medians.     
+
