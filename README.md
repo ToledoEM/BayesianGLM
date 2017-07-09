@@ -18,3 +18,5 @@ doParallel
 Run "runGLM.R"  
 You can modify DATASET/GENESET/CELLTYPESET in the script to create your own plot.
 
+### Figure 4A    
+![Figure 4A](Fig4A.png)
