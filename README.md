@@ -26,9 +26,4 @@ Changes in Violinplot.R, now by default violin plots are scaled in width.
        
 **With scaled violin plot**   
 ![Figure 2F](Fig2F.png)		
-     		
-**Figure 4A, not scaled**   
-![Figure 4A](Fig4A_old.png)
-           
-**Figure 4A scaled**   
-![Figure 4A](Fig4A.png)
+ 
