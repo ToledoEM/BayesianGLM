@@ -18,3 +18,17 @@ doParallel
 Run "runGLM.R"  
 You can modify DATASET/GENESET/CELLTYPESET in the script to create your own plot.
 
+### Figures 		
+Changes in Violinplot.R, now by default violin plots are scaled in width.
+
+**Figure 2F  without violin plot scaled**       		
+![Figure 2F](Fig2F_old.png)    
+       
+**With scaled violin plot**   
+![Figure 2F](Fig2F.png)		
+     		
+**Figure 4A, not scaled**   
+![Figure 4A](Fig4A_old.png)
+           
+**Figure 4A scaled**   
+![Figure 4A](Fig4A.png)
