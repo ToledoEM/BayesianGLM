@@ -8,7 +8,7 @@ options(mc.cores = parallel::detectCores())
 
 # Function to extract all genes in dataset using readCEF fucntion 
 get.genes.and.cells <- function(DATASET){
-    temp <- readCEF(DATASET)
+  temp <- readCEF(DATASET)
   cells <- unique(temp$Cell_type)
   genes <- rownames(temp$Readcount)
   metadata <- list(
@@ -19,7 +19,7 @@ get.genes.and.cells <- function(DATASET){
 }
 
 
-BayesianGLM_alldataset <- function(DATASET, parallel=T){
+BayesianGLM_alldataset <- function(DATASET, parallel=T,cores=8){
   print("Modeling entire dataset")
   stanmodel <- "
 
@@ -117,7 +117,7 @@ BayesianGLM_alldataset <- function(DATASET, parallel=T){
 
     library(doParallel)
 
-    cl <- makeCluster(detectCores())
+    cl <- makeCluster(cores)
 
       registerDoParallel(cl)
 
